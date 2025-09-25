@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 st.set_page_config(
-    page_title="Insurance Cost Explorer"
+    page_title="Insurance Cost Explorer",
     layout="wide"
 )
 @st.cache_data
