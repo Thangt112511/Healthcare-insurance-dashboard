@@ -56,12 +56,19 @@ filtered_df = df[df['region'].isin(region) & df['smoker'].isin(smoker) & df['age
 st.title("Health Insurance Cost Dashboard")
 st.markdown("Analyze how demographic traits affect medical insurance charges.")
 
-fig1 = px.box(filtered_df, x='age_group', y='charges', color='smoker', title="Charges by Age Group and Smoking Status")
+fig1 = px.box(filtered_df, x='age_group', y='insurance charges
+', color='smoker', title="insurance charges
+ by Age Group and Smoking Status")
 st.plotly_chart(fig1)
 
-fig2 = px.box(filtered_df, x='bmi_category', y='charges', color='smoker', title="Charges by BMI Category")
+fig2 = px.box(filtered_df, x='bmi_category', y='insurance charges
+', color='smoker', title="insurance charges
+ by BMI Category")
 st.plotly_chart(fig2)
 
-region_avg = filtered_df.groupby('region', as_index=False)['charges'].mean()
-fig3 = px.bar(region_avg, x='region', y='charges', title='Average Charges by Region')
+region_avg = filtered_df.groupby('region', as_index=False)['insurance charges
+'].mean()
+fig3 = px.bar(region_avg, x='region', y='insurance charges
+', title='Average insurance charges
+ by Region')
 st.plotly_chart(fig3)
