@@ -1,0 +1,69 @@
+Healthcare Insurance Cost Explorer
+==================================
+
+An interactive data dashboard built with Python, Pandas, and Streamlit, designed to visualize and analyze how factors like age, BMI, smoking status, and region influence insurance charges.
+
+FEATURES
+--------
+- Load and explore healthcare insurance data of 1300+ policyholders
+- Filter views by region, smoking status, gender, and more
+- Interactive charts built using Plotly (click on points to view exact values)
+- Hover, zoom, and filter features to assist exploration
+- Key findings surfaced through correlation and statistical analysis
+
+TECH STACK
+----------
+Python         : Data processing & backend  
+Pandas / NumPy : Data cleaning and analysis  
+Plotly         : Interactive visualizations  
+Streamlit      : Web-based dashboard  
+GitHub         : Version control & hosting  
+Excel          : Initial data formatting
+
+KEY INSIGHTS
+------------
+- Smoking is the strongest driver of high insurance costs (300%+ increase in average charge).
+- BMI above 30 is associated with higher-than-average charges, especially among smokers.
+- Age and number of children have moderate influence.
+- Region shows minimal impact, but slight variations exist in the southeast.
+
+HOW TO RUN LOCALLY
+------------------
+1. Clone the repository:
+
+   git clone https://github.com/yourusername/healthcare-insurance-dashboard.git  
+   cd healthcare-insurance-dashboard
+
+2. Install the requirements:
+
+   pip install -r requirements.txt
+
+3. Run the app:
+
+   streamlit run app.py
+
+PROJECT STRUCTURE
+-----------------
+app.py               - Main Streamlit app  
+insurance.csv        - Dataset (from Kaggle or local file)  
+requirements.txt     - Python dependencies  
+README.txt           - Project overview
+
+DATASET
+-------
+Source: Kaggle - Medical Cost Personal Datasets  
+Contains demographic and medical info for over 1,300 individuals:  
+- age, sex, bmi, children, smoker, region, charges
+
+STATUS
+------
+Completed and deployed on Streamlit Cloud  
+Future enhancements planned (e.g., model predictions, more filters)
+
+AUTHOR
+------
+Thang Tran
+LinkedIn: https://www.linkedin.com/in/thang-tran-0648491b5/
+Portfolio: https://thangtranportfolio.vercel.app/
+Email: thangt112511@gmail.com
+
