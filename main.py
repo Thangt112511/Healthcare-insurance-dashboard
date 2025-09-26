@@ -69,9 +69,9 @@ print(df[['age', 'age_group', 'bmi', 'bmi_category', 'children', 'children_label
 fig = px.box(
     df,
     x='age_group',
-    y='charges',
+    y='Insurance charges',
     color='age_group',
-    title='Charges by Age Group'
+    title='Insurance charges by Age Group'
 )
 fig.show()
 
@@ -79,9 +79,9 @@ fig.show()
 fig = px.box(
     df,
     x='smoker',
-    y='charges',
+    y='Insurance charges',
     color='smoker',
-    title='Charges by Smoking Status'
+    title='Insurance charges by Smoking Status'
 )
 fig.show()
 
@@ -89,41 +89,41 @@ fig.show()
 fig = px.box(
     df,
     x='bmi_category',
-    y='charges',
+    y='Insurance charges',
     color='bmi_category',
-    title='Charges by BMI Category',
+    title='Insurance charges by BMI Category',
     category_orders={'bmi_category': ['Underweight', 'Normal', 'Overweight', 'Obese']}
 )
 fig.show()
 
 
-region_avg = df.groupby('region', as_index=False)['charges'].mean()
+region_avg = df.groupby('region', as_index=False)['Insurance charges'].mean()
 
 fig = px.bar(
     region_avg,
     x='region',
-    y='charges',
+    y='Insurance charges',
     color='region',
-    title='Average Charges by Region'
+    title='Average Insurance charges by Region'
 )
 fig.show()
 
 fig = px.box(
     df,
     x='children_label',
-    y='charges',
+    y='Insurance charges',
     color='children_label',
-    title='Charges by Number of Children'
+    title='Insurance charges by Number of Children'
 )
 fig.show()
 
 fig = px.scatter(
     df,
     x='age',
-    y='charges',
+    y='Insurance charges',
     color='smoker',
     hover_data=['bmi', 'region', 'children'],
-    title='Interactive: Age vs Charges Colored by Smoking Status'
+    title='Interactive: Age vs Insurance charges Colored by Smoking Status'
 )
 
 fig.show()
