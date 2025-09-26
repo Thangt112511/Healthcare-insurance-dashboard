@@ -56,7 +56,7 @@ filtered_df = df[df['region'].isin(region) & df['smoker'].isin(smoker) & df['age
 st.title("Health Insurance Cost Dashboard")
 st.markdown("Analyze how demographic traits affect medical insurance charges.")
 
-fig1 = px.box(filtered_df, x='age_group', y='insurance charges', color='smoker', title="insurance charges
+fig1 = px.box(filtered_df, x='age_group', y='insurance charges', color='smoker', title="insurance charges"
  by Age Group and Smoking Status")
 st.plotly_chart(fig1)
 
