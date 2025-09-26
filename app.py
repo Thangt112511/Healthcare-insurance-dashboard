@@ -53,7 +53,7 @@ age_group = st.sidebar.multiselect(
 
 filtered_df = df[df['region'].isin(region) & df['smoker'].isin(smoker) & df['age_group'].isin(age_group)]
 
-st.title("📊 Health Insurance Cost Dashboard")
+st.title("Health Insurance Cost Dashboard")
 st.markdown("Analyze how demographic traits affect medical insurance charges.")
 
 fig1 = px.box(filtered_df, x='age_group', y='charges', color='smoker', title="Charges by Age Group and Smoking Status")
